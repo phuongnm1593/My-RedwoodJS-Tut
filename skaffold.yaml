@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta13
+kind: Config
+metadata:
+  name: redwoodjs-tut
+build:
+  artifacts:
+  - image: redwoodjs-tut
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - myredwoodtut-deployment.yaml
+    - myredwoodtut-service.yaml

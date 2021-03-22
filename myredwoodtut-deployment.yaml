@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: myredwoodtut
+  name: myredwoodtut
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myredwoodtut
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: myredwoodtut
+    spec:
+      containers:
+      - image: redwoodjs-tut:1.0.0
+        name: redwoodjs-tut
+        resources: {}
+status: {}

@@ -1,0 +1,8 @@
+version: "3"
+services:
+  app:
+    image: redwoodjs-tut:1.0.0
+    build: .
+    ports:
+      - "${DEV_PORT}:8910"
+    command: yarn redwood dev
